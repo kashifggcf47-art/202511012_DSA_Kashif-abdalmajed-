@@ -1,0 +1,7 @@
+- Inception: Bjarne Structure crafted C++ at Bell Labs back in 1979.
+
+- Transformation: It emerged under the moniker "C with Classes" and was later rebranded C++ in 1983.
+
+- Progression: Infused object-oriented aspects into the robust C programming language.
+
+- Standardizing: The inaugural global standardization occurred in 1998, denoted as C++98.

@@ -1,0 +1,7 @@
+1.Data Varieties: Employed for specifying variable types (e.g., integer, floating point, character, Boolean).
+
+2.Flow Management: Constructs such as if-else and switch-case govern the program's flow.
+
+3.Iteration: Utilized for repetitively executing code blocks (e.g., for, while, do-while).
+
+4.Arrays: Aggregations of similar data type elements stored sequentially in memory.5. File Handling: Employing if stream and of stream for reading from and writing to external files.
