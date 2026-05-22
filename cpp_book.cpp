@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// إعلان الدوال (Prototypes)
+
 void showMenu();
 void displayHistory();
 void displayConcepts();
@@ -17,7 +17,7 @@ int main() {
         cout << "\nEnter your choice: ";
         cin >> choice;
 
-        // تنظيف الذاكرة المؤقتة بعد إدخال الرقم لكي تعمل قراءة الملفات بشكل صحيح
+
         cin.ignore(); 
 
         switch (choice) {
@@ -38,7 +38,7 @@ int main() {
     return 0;
 }
 
-// دالة عرض قائمة الكتاب
+
 void showMenu() {
     cout << "\n=============================================" << endl;
     cout << "  BOOK: Foundations and History of C++   " << endl;
@@ -49,7 +49,6 @@ void showMenu() {
     cout << "=============================================" << endl;
 }
 
-// دالة قراءة وعرض التاريخ من ملف خارجي
 void displayHistory() {
     ifstream file("history.txt");
     string line;
@@ -57,19 +56,19 @@ void displayHistory() {
     cout << "\n--- History of C++ ---" << endl;
     
     if (file.is_open()) {
-        // قراءة الملف سطرًا بسطر حتى نهايته
+
         while (getline(file, line)) {
             cout << line << endl;
         }
         file.close();
     } else {
-        // نص احتياطي (Hardcoded) في حال عدم وجود الملف كما سمح الواجب
+
         cout << "[Notice: history.txt not found. Showing default content]" << endl;
         cout << "C++ was created by Bjarne Stroustrup in 1979 at Bell Labs as an extension of C." << endl;
     }
 }
 
-// دالة قراءة وعرض المفاهيم من ملف خارجي
+
 void displayConcepts() {
     ifstream file("concepts.txt");
     string line;
@@ -77,13 +76,13 @@ void displayConcepts() {
     cout << "\n--- C++ Programming Concepts ---" << endl;
     
     if (file.is_open()) {
-        // قراءة الملف سطرًا بسطر حتى نهايته
+
         while (getline(file, line)) {
             cout << line << endl;
         }
         file.close();
     } else {
-        // نص احتياطي
+
         cout << "[Notice: concepts.txt not found. Showing default content]" << endl;
         cout << "Concepts include: Data Types, Control Flow, Loops, Arrays, and File Streams." << endl;
     }
