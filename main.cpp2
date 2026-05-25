@@ -1,0 +1,62 @@
+#include <iostream>
+#include "student.h"
+
+using namespace std;
+
+
+void swapNumbers(int* ptr1, int* ptr2) {
+    int temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+}
+
+int main() {
+
+    cout << "=======================================\n";
+    cout << "   QUESTION 1: Swap Using Pointers     \n";
+    cout << "=======================================\n";
+    int num1 = 15, num2 = 30;
+    cout << "Before Swap: Num1 = " << num1 << ", Num2 = " << num2 << endl;
+    
+    swapNumbers(&num1, &num2);
+    cout << "After Swap:  Num1 = " << num1 << ", Num2 = " << num2 << endl;
+    cout << "=======================================\n\n";
+
+    int choice;
+    do {
+        cout << "\n--- STUDENT MANAGEMENT SYSTEM ---\n";
+        cout << "1. Add Student\n";
+        cout << "2. Display All Students\n";
+        cout << "3. Search Student by ID\n";
+        cout << "4. Update Student Info\n";
+        cout << "5. Delete a Student\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice (1-6): ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                addStudent();
+                break;
+            case 2:
+                displayStudents();
+                break;
+            case 3:
+                searchStudent();
+                break;
+            case 4:
+                updateStudent();
+                break;
+            case 5:
+                deleteStudent();
+                break;
+            case 6:
+                cout << "\nExiting the program. Goodbye!\n";
+                break;
+            default:
+                cout << "\n[Invalid Choice] Please enter a number between 1 and 6.\n";
+        }
+    } while (choice != 6); 
+
+    return 0;
+}
